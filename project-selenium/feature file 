@@ -1,0 +1,30 @@
+Feature: Addition of numbers
+
+Background: //Prerequisites
+  
+  Given : I am Background Scenario 
+  //if we want to test single Scenario, single set of data 
+
+ @Selenium
+  
+  Scenario : add two numbers
+  
+  Given numbers are 10 and 12
+  When i added both numbers 
+  Then i verify result is 22
+  
+  //if we want to test multiple set of data we will use scenario outline 
+
+  Scenario Outline:  Add two numbers
+  
+  Given numbers are <First Value>and <Second Value>
+  when I added both numbers
+  then I verify result is <Results>
+  
+  Examples:
+             |First Value | Second Value| Results |
+             |     1      |     2       |   3     |
+             |    10      |    30       |  40     |
+             |    80      |    20       | 100     |
+             |     2      |     7       |   9     |
+             |     6      |    50       |  56     |
